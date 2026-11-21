@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#d81b23">
+<title>জগদ্ধাত্রী পূজা ২০২৬ | শিমুলপুর অগ্রগামী</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@800&family=Baloo+Da+2:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#f4ecc9; --paper:#fffaee; --red:#d81b23; --red-dark:#9e0f17; --marigold:#f2a516; --gold:#ffd86b;
+  --ink:#3a0b0b; --muted:#7b5a4e; --leaf:#1f9d55; --wrong:#c81e2a; --line:#e7d7a8;
+  --display:'Noto Serif Bengali','Baloo Da 2',serif; --body:'Baloo Da 2','Noto Sans Bengali',sans-serif;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{background:var(--cream)}
+body{margin:0;min-height:100vh;font-family:var(--body);font-size:17px;line-height:1.55;color:var(--ink);background:transparent;overflow-x:hidden}
+#bg{position:fixed;left:0;top:0;width:100vw;z-index:-1;pointer-events:none}
+.wrap{width:min(720px,100%);margin:0 auto;padding:0 14px calc(40px + env(safe-area-inset-bottom));position:relative}
+button,a{font-family:inherit}
+:focus-visible{outline:3px solid var(--marigold);outline-offset:3px}
+
+/* ---------- header on the red rays ---------- */
+.lights{display:block;width:100%;height:46px}
+.lights .wire{fill:none;stroke:#7a0a12;stroke-width:1.4}
+.bulb{transition:fill .35s,filter .35s}
+.brand{position:relative;text-align:center;padding:6px 8px 18px}
+.alpana{display:none}
+.kicker{position:relative;color:var(--paper);font-weight:700;font-size:16px;text-shadow:0 0 2px #7a0a12,0 0 2px #7a0a12,0 0 4px #7a0a12,0 1px 0 #7a0a12}
+h1{position:relative;font-family:var(--display);font-weight:800;font-style:normal;font-size:clamp(36px,10.5vw,60px);line-height:1.25;margin:4px 0 2px;color:var(--paper);
+  text-shadow:0 0 2px var(--red-dark),0 0 3px var(--red-dark),0 3px 0 var(--red-dark),0 0 18px #7a0a12aa}
+.sub{position:relative;color:var(--paper);font-weight:700;font-size:16px;text-shadow:0 0 2px #7a0a12,0 0 2px #7a0a12,0 0 4px #7a0a12,0 1px 0 #7a0a12}
+.head-lights .bulb{animation:twinkle 2.6s ease-in-out infinite}
+@keyframes twinkle{0%,100%{opacity:1}50%{opacity:.5}}
+
+/* ---------- panel: paper card with a red pandal fringe (jhalar) ---------- */
+.panel{position:relative;margin-top:16px;background:var(--paper);border:2px solid var(--red);border-radius:6px 6px 22px 22px;
+  padding:30px clamp(16px,4vw,32px) 26px;box-shadow:0 14px 34px #9e0f1730}
+.panel:before{content:"";position:absolute;left:-2px;right:-2px;top:-2px;height:14px;border-radius:6px 6px 0 0;
+  background:radial-gradient(circle at 9px 0,var(--red) 8.5px,transparent 9px) 0 0/18px 14px repeat-x}
+.panel:after{content:"";position:absolute;left:0;right:0;top:12px;height:2px;background:repeating-linear-gradient(90deg,var(--marigold) 0 6px,transparent 6px 12px);opacity:.7}
+.hidden{display:none!important}
+.center{text-align:center}
+h2{font-family:var(--display);font-weight:800;font-style:normal;font-size:27px;line-height:1.3;margin:6px 0 6px;color:var(--red)}
+.lead{color:var(--muted);margin:0 0 6px}
+label{display:block;margin:16px 0 6px;color:var(--red-dark);font-weight:700}
+input{width:100%;padding:14px 16px;border-radius:14px;border:2px solid var(--line);background:#fff;color:var(--ink);font:500 19px var(--body);outline:none}
+input:focus{border-color:var(--red);box-shadow:0 0 0 4px #d81b2322}
+input::placeholder{color:#b59f86}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:56px;border:0;border-radius:999px;padding:12px 28px;
+  font:700 19px var(--body);cursor:pointer;color:#3a1a00;background:linear-gradient(180deg,#ffc94a,var(--marigold));
+  box-shadow:0 5px 0 #b27200,0 10px 20px #f2a51633;text-decoration:none;transition:transform .08s,box-shadow .08s}
+.btn:active{transform:translateY(4px);box-shadow:0 1px 0 #b27200}
+.btn.sindoor{color:var(--paper);background:linear-gradient(180deg,#ec3a40,var(--red));box-shadow:0 5px 0 var(--red-dark),0 10px 20px #d81b2333}
+.btn.sindoor:active{box-shadow:0 1px 0 var(--red-dark)}
+.btn.ghost{background:transparent;color:var(--red);border:2px solid var(--red);box-shadow:none;min-height:50px}
+.btn.ghost:active{transform:translateY(2px)}
+.btn.full{width:100%}
+.stack{display:flex;flex-direction:column;gap:14px;margin-top:22px}
+.note{text-align:center;color:var(--muted);font-size:15px;margin:16px 0 0}
+
+/* home choices */
+.choice{display:flex;align-items:center;gap:14px;padding:14px 16px;border-radius:18px;text-decoration:none;color:var(--ink);
+  background:#fff;border:2px solid var(--line);transition:transform .1s,border-color .2s}
+.choice:active{transform:scale(.98);border-color:var(--red)}
+.choice b{display:block;font-size:20px}
+.choice span.s{color:var(--muted);font-size:15px}
+.choice .ic{flex:none;width:46px;height:46px;border-radius:50%;display:grid;place-items:center;font:800 22px var(--display);color:var(--paper);background:var(--red)}
+.choice.demo .ic{background:var(--marigold);color:#3a1a00}
+
+/* ---------- quiz ---------- */
+.quiz-lights{margin:-8px -6px 4px}
+.quiz-lights .wire{stroke:#b9a376}
+.quiz-lights .bulb{fill:#e2d3a6}
+.quiz-lights .bulb.on{fill:var(--marigold);filter:url(#glow)}
+.quiz-lights .bulb.now{fill:var(--red);filter:url(#glow);animation:blink 1s ease-in-out infinite}
+.quiz-lights .bulb.miss{fill:#a8957a}
+.result-lights .wire{stroke:#b9a376}
+.result-lights .bulb{fill:#e2d3a6}
+.bulb.res-ok{fill:var(--leaf)!important;filter:url(#glow)}
+.bulb.res-bad{fill:var(--wrong)!important;filter:url(#glow)}
+.bulb.res-miss{fill:#a8957a!important}
+@keyframes blink{50%{opacity:.35}}
+.topline{display:flex;justify-content:space-between;align-items:center;gap:10px;font-weight:700}
+.count{color:var(--red)}
+.who{color:var(--muted);max-width:55%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.demo-flag{display:inline-block;margin:0 auto 8px;padding:3px 14px;border-radius:999px;background:var(--marigold);color:#3a1a00;font-weight:700;font-size:15px}
+
+.ring-wrap{position:relative;width:118px;height:118px;margin:10px auto 4px}
+.ring-wrap svg{position:absolute;inset:0;transform:rotate(-90deg)}
+.ring-bg{fill:#fff;stroke:#efe3bd;stroke-width:9}
+.ring{fill:none;stroke:#b08a3a;stroke-width:9;stroke-linecap:round;transition:stroke-dashoffset .2s linear,stroke .3s}
+.ring-wrap.answer .ring{stroke:var(--red)}
+.ring-wrap.urgent .ring{stroke:var(--red-dark)}
+#timer{position:absolute;inset:0;display:grid;place-items:center;font:800 40px/1 var(--display);color:var(--ink)}
+.ring-wrap.answer #timer{color:var(--red)}
+.ring-wrap.urgent #timer{color:var(--red-dark);animation:beat .5s ease-in-out infinite}
+@keyframes beat{50%{transform:scale(1.12)}}
+.phase{text-align:center;font-weight:700;color:var(--muted);font-size:16px;min-height:26px}
+.ring-wrap.answer + .phase{color:var(--red)}
+
+.question{font-size:clamp(21px,5.6vw,27px);line-height:1.5;font-weight:700;text-align:center;margin:12px 0 18px;color:var(--ink)}
+.options{display:grid;gap:12px}
+.opt{position:relative;display:flex;align-items:center;gap:12px;width:100%;min-height:62px;padding:10px 14px;border-radius:16px;
+  border:2px solid var(--line);background:#fff;color:var(--ink);text-align:left;font:600 19px/1.35 var(--body);cursor:pointer;
+  transition:transform .12s,background .2s,border-color .2s,opacity .3s}
+.opt .letter{flex:none;width:38px;height:38px;border-radius:50%;display:grid;place-items:center;font:800 19px var(--display);color:var(--paper);background:var(--red);transition:background .2s}
+.options.locked .opt{opacity:.6}
+.options.locked .opt .letter{background:#cdbb92}
+.options.open .opt{border-color:#e9b9a0;animation:ready .35s ease-out both}
+.options.open .opt:nth-child(2){animation-delay:.05s}.options.open .opt:nth-child(3){animation-delay:.1s}.options.open .opt:nth-child(4){animation-delay:.15s}
+@keyframes ready{from{transform:scale(.97)}to{transform:none}}
+.opt:active:not(:disabled){transform:scale(.97)}
+.opt:disabled{cursor:default}
+.opt.selected{opacity:1!important;background:linear-gradient(180deg,#ffc94a,var(--marigold));color:#3a1a00;border-color:#b27200;animation:pick .35s ease-out}
+.opt.selected .letter{background:#3a1a00;color:var(--gold)}
+.opt.right{opacity:1!important;background:#e3f6e9;border-color:var(--leaf);color:#0f4d2a}
+.opt.right .letter{background:var(--leaf);color:#fff}
+.opt.bad{opacity:1!important;background:#fde3e3;border-color:var(--wrong);color:#7a0d14;animation:shake .35s}
+.opt.bad .letter{background:var(--wrong);color:#fff}
+@keyframes pick{40%{transform:scale(1.04)}}
+@keyframes shake{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+.hint{margin:16px 0 0;padding:12px 14px;border-radius:14px;background:#fff3d1;border:1.5px dashed var(--marigold);color:#6b3e00;text-align:center;animation:drop .3s ease-out}
+@keyframes drop{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.status{text-align:center;color:var(--muted);margin-top:12px;min-height:26px;font-size:15px}
+
+/* ---------- results ---------- */
+.score-big{font:800 clamp(56px,17vw,88px)/1.15 var(--display);text-align:center;color:var(--red);margin:6px 0 0}
+.score-cap{text-align:center;color:var(--muted)}
+.time{text-align:center;font-weight:700;color:var(--ink);margin:8px 0}
+.result-lights{margin:6px -6px 0}
+.save{margin:14px 0;text-align:center;padding:12px 14px;border-radius:14px;font-weight:600}
+.save.wait{background:#fff3d1;border:1.5px solid var(--marigold);color:#6b3e00}
+.save.ok{background:#e3f6e9;border:1.5px solid var(--leaf);color:#0f4d2a}
+.save.err{background:#fde3e3;border:1.5px solid var(--wrong);color:#7a0d14}
+.review{margin-top:14px}
+.result-row{padding:12px 0;border-bottom:1px solid var(--line)}
+.result-row b{display:block}
+.correct{color:#157a40}.wrong{color:#b0141d}.unanswered{color:#8a5a00}
+.actions{display:grid;gap:12px;margin-top:20px}
+.who-line{text-align:center;color:var(--muted)}
+
+/* sound toggle + petals */
+.sound{position:fixed;right:12px;top:calc(10px + env(safe-area-inset-top));z-index:5;width:44px;height:44px;border-radius:50%;border:2px solid var(--paper);
+  background:var(--red);color:var(--paper);display:grid;place-items:center;cursor:pointer;box-shadow:0 3px 10px #6a050b55}
+.sound svg{width:22px;height:22px}
+#petals{position:fixed;inset:0;pointer-events:none;z-index:4}
+footer{text-align:center;color:var(--muted);margin-top:26px;font-size:14px}
+
+/* while a question is on screen, the header shrinks so options and hint fit */
+body.playing .head-lights{height:24px}
+body.playing .brand{padding:0 0 2px}
+body.playing .alpana,body.playing .kicker,body.playing .sub,body.playing footer{display:none}
+body.playing h1{font-size:26px;text-shadow:0 2px 0 var(--red-dark)}
+body.playing .panel{margin-top:10px;padding-top:24px}
+@media (max-height:700px){
+  body.playing .panel{padding-top:20px}
+  .quiz-lights{height:30px}
+  .ring-wrap{width:78px;height:78px;margin:2px auto 0}
+  #timer{font-size:30px}
+  .phase{min-height:22px;font-size:15px}
+  .question{font-size:19px;margin:6px 0 10px}
+  .opt{min-height:48px;font-size:17px;padding:6px 12px}
+  .opt .letter{width:30px;height:30px;font-size:16px}
+  .options{gap:8px}
+  .hint{margin-top:10px;padding:8px 12px;font-size:15px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*:before,*:after{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+<button class="sound" id="soundBtn" type="button" aria-label="শব্দ চালু/বন্ধ"></button>
+<canvas id="bg" aria-hidden="true"></canvas>
+<canvas id="petals" aria-hidden="true"></canvas>
+
+<div class="wrap">
+  <svg class="lights head-lights" id="headLights" viewBox="0 0 360 46" preserveAspectRatio="none" aria-hidden="true"></svg>
+  <header class="brand">
+    <svg class="alpana" viewBox="-100 -100 200 200" aria-hidden="true" id="alpana"></svg>
+    <div class="kicker">শ্রী শ্রী জগদ্ধাত্রী পূজা ২০২৬</div>
+    <h1>শিমুলপুর অগ্রগামী</h1>
+    <div class="sub">কুইজ প্রতিযোগিতা</div>
+  </header>
+
+  <section id="homeScreen" class="panel hidden">
+    <h2 class="center">কোন কুইজটি খেলবেন?</h2>
+    <div class="stack">
+      <a class="choice demo" href="?set=demo"><span class="ic">অ</span><span><b>অনুশীলন</b><span class="s">৫টি সহজ প্রশ্নে নিয়ম শিখে নিন</span></span></a>
+      <a class="choice" href="?set=1"><span class="ic">১</span><span><b>কুইজ সেট ১</b><span class="s">২০টি প্রশ্ন</span></span></a>
+      <a class="choice" href="?set=2"><span class="ic">২</span><span><b>কুইজ সেট ২</b><span class="s">২০টি প্রশ্ন</span></span></a>
+    </div>
+  </section>
+
+  <section id="entryScreen" class="panel hidden">
+    <h2 class="center">প্রতিযোগীর তথ্য</h2>
+    <p class="lead center">নাম আর মোবাইল নম্বর লিখে শুরু করুন।</p>
+    <form id="entryForm" novalidate>
+      <label for="playerName">আপনার নাম</label>
+      <input id="playerName" type="text" maxlength="70" autocomplete="name" placeholder="সম্পূর্ণ নাম">
+      <label for="playerPhone">মোবাইল নম্বর</label>
+      <input id="playerPhone" type="tel" inputmode="numeric" maxlength="16" autocomplete="tel" placeholder="১০ সংখ্যার নম্বর">
+      <div class="stack"><button class="btn full" type="submit">এগিয়ে চলুন</button></div>
+    </form>
+  </section>
+
+  <section id="readyScreen" class="panel hidden center">
+    <h2 id="welcomeName"></h2>
+    <p class="lead" id="readyInfo"></p>
+    <p class="lead">প্রতি প্রশ্নে প্রথম ১০ সেকেন্ড শুধু পড়ার জন্য, তারপর ২০ সেকেন্ডে উত্তর বাছুন। উত্তর দেওয়ার সময় একটি ইঙ্গিতও আসবে।</p>
+    <div class="stack">
+      <button class="btn sindoor" id="startRealBtn" type="button">আসল কুইজ শুরু করুন</button>
+      <button class="btn" id="startDemoBtn" type="button">আগে অনুশীলন করুন</button>
+    </div>
+    <p class="note" id="readyNote">প্রথমবার খেললে অনুশীলনটা করে নিন — ৫টি সহজ প্রশ্ন, ফলাফল জমা হয় না, আর সঙ্গে সঙ্গে দেখাবে ঠিক না ভুল।</p>
+  </section>
+
+  <section id="resumeScreen" class="panel hidden center">
+    <h2 id="resumeTitle"></h2>
+    <p class="lead" id="resumeInfo"></p>
+    <div class="stack">
+      <button class="btn sindoor" id="resumeBtn" type="button">কুইজ চালিয়ে যান</button>
+      <button class="btn ghost" id="abandonBtn" type="button">অন্য প্রতিযোগী খেলবেন</button>
+    </div>
+    <p class="note">অন্য প্রতিযোগী খেললে আগের জনের অর্ধেক খেলা যেমন আছে তেমনই জমা হয়ে যাবে।</p>
+  </section>
+
+  <section id="quizScreen" class="panel hidden">
+    <svg class="lights quiz-lights" id="quizLights" viewBox="0 0 360 46" preserveAspectRatio="none" aria-hidden="true"></svg>
+    <div class="center" id="demoTag"><span class="demo-flag">অনুশীলন — ফলাফল জমা হবে না</span></div>
+    <div class="topline"><span class="count" id="qCounter"></span><span class="who" id="playerTag"></span></div>
+    <div class="ring-wrap" id="ringWrap">
+      <svg viewBox="0 0 120 120" aria-hidden="true"><circle class="ring-bg" cx="60" cy="60" r="52"/><circle class="ring" id="ring" cx="60" cy="60" r="52"/></svg>
+      <div id="timer" role="timer" aria-live="off"></div>
+    </div>
+    <div class="phase" id="phaseText"></div>
+    <div class="question" id="questionText"></div>
+    <div class="options locked" id="options"></div>
+    <div class="hint hidden" id="hintBox"></div>
+    <div class="status" id="statusText" aria-live="polite"></div>
+  </section>
+
+  <section id="completeScreen" class="panel hidden center">
+    <h2 id="completeBadge"></h2>
+    <div class="save hidden" id="saveBox1"></div>
+    <p class="lead" id="completeText"></p>
+    <div class="stack"><button class="btn sindoor" id="showResultBtn" type="button">ফলাফল দেখুন</button></div>
+  </section>
+
+  <section id="resultScreen" class="panel hidden">
+    <h2 class="center" id="resultTitle"></h2>
+    <div class="who-line" id="resultPlayer"></div>
+    <svg class="lights result-lights" id="resultLights" viewBox="0 0 360 46" preserveAspectRatio="none" aria-hidden="true"></svg>
+    <div class="score-big" id="scoreText"></div>
+    <div class="score-cap" id="scoreCaption"></div>
+    <div class="time" id="elapsedText"></div>
+    <div class="save hidden" id="saveBox2"></div>
+    <div class="stack hidden" id="afterDemo"><button class="btn sindoor" id="demoToRealBtn" type="button">এবার আসল কুইজ শুরু করুন</button></div>
+    <div class="review" id="answerReview"></div>
+    <div class="actions" id="realActions">
+      <button class="btn" id="downloadBtn" type="button">উত্তরপত্র ডাউনলোড করুন</button>
+      <button class="btn ghost" id="waBtn" type="button">WhatsApp-এ স্কোর পাঠান</button>
+    </div>
+    <div class="stack"><button class="btn ghost" id="newPlayerBtn" type="button">নতুন প্রতিযোগী</button></div>
+  </section>
+
+  <footer>শ্রী শ্রী জগদ্ধাত্রী পূজা ২০২৬ · শিমুলপুর অগ্রগামী</footer>
+</div>
+
+<script>
+/* ======================= সেটিংস (SETTINGS) =======================
+   ১) SCRIPT_URL — Google Apps Script "Web app" Deploy করার পর যে লিংক
+      পাবেন (…/exec দিয়ে শেষ হয়), সেটি নিচের উদ্ধৃতি চিহ্নের ভেতরে বসান।
+   ২) WHATSAPP_NUMBER — স্কোর পাঠানোর নম্বর (দেশের কোড ৯১ সহ, + ছাড়া)।
+   ৩) SHOW_ANSWERS — true হলে খেলা শেষে সঠিক উত্তরগুলো দেখাবে।
+      অন্য গ্রুপ পরে খেললে উত্তর ফাঁস হতে পারে; চাইলে false করুন।     */
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxavlFbwLw21ZpQbXZxB8XibP1t9J7684P9jbp_Kv8AsUQjSjuI2awVRByH1A4S48yR/exec";
+const WHATSAPP_NUMBER = "918250811460";
+const SHOW_ANSWERS = true;
+/* ================================================================ */
+
+const READ_SECONDS = 10, ANSWER_SECONDS = 20;
+const QS = {"demo":[{"q":"আকাশের রং কী?","o":["সবুজ","নীল","লাল","হলুদ"],"a":1,"h":"দিনের বেলায় তাকালেই দেখো।"},{"q":"এক সপ্তাহে কয় দিন?","o":["৫ দিন","৬ দিন","৭ দিন","৮ দিন"],"a":2,"h":"রবি থেকে শনি গুনে দেখো।"},{"q":"বরফ কী দিয়ে তৈরি?","o":["আগুন","জল","মাটি","বাতাস"],"a":1,"h":"জল ফ্রিজে রাখলে কী হয়?"},{"q":"কোন প্রাণী ম্যাও ম্যাও করে?","o":["কুকুর","বিড়াল","গরু","ছাগল"],"a":1,"h":"ইঁদুর ধরে যে।"},{"q":"আমাদের নাক দিয়ে আমরা কী করি?","o":["দেখি","শুনি","শ্বাস নিই / গন্ধ পাই","খাই"],"a":2,"h":"সর্দি হলে কোনটা বন্ধ হয়?"}],"s1":[{"q":"জনপ্রিয় রিয়্যালিটি শো 'দিদি নম্বর ১'-এর দীর্ঘসময়ের সঞ্চালিকা কে?","o":["অপরাজিতা আঢ্য","রচনা বন্দ্যোপাধ্যায়","সুদীপা চট্টোপাধ্যায়","জুন মালিয়া"],"a":1,"h":"“প্রণাম দিদি” ডায়লগটি ওনার খুব জনপ্রিয়।"},{"q":"“জল খেলে মরে, না খেলে বাঁচে— বলতো দেখি সে কী?”","o":["আগুন","গাছ","মেঘ","মাছ"],"a":0,"h":"এটি নেভাতে আমরা জল ব্যবহার করি।"},{"q":"সন্দীপ রায় পরিচালিত 'ফটিক চাঁদ' (১৯৮৩) ছবিটি কোন লেখকের কাহিনি অবলম্বনে তৈরি?","o":["রবীন্দ্রনাথ ঠাকুর","শরদিন্দু বন্দ্যোপাধ্যায়","সত্যজিৎ রায়","উপেন্দ্রকিশোর রায়চৌধুরী"],"a":2,"h":"পরিচালক সন্দীপ রায়ের বাবা, নিজেও বিশ্বখ্যাত চলচ্চিত্রকার।"},{"q":"সকালবেলা শাশুড়ি মা যদি বলেন, “আজ একটু অন্যরকম ব্রেকফাস্ট হবে”, তাহলে প্রথম চিন্তা কী?","o":["রান্নাঘরে চাল-ডাল আছে তো?","ঘুমিয়ে পড়া","বাইরে থেকে বিরিয়ানি অর্ডার করা","ফ্রিজে ময়দা বা ব্রেড আছে কি না দেখা"],"a":3,"h":"ঝটপট লুচি বা স্যান্ডউইচ বানানোর উপাদান খোঁজা।"},{"q":"রবীন্দ্রনাথ ঠাকুরের 'সহজ পাঠ' বইয়ের বিখ্যাত ছবিগুলো কার আঁকা ছিল?","o":["নন্দলাল বসু","অবনীন্দ্রনাথ ঠাকুর","গগনেন্দ্রনাথ ঠাকুর","যামিনী রায়"],"a":0,"h":"শান্তিনিকেতনের কলাভবনের প্রখ্যাত অধ্যক্ষ।"},{"q":"কোন মাছকে বাঙালির হেঁশেলে 'রুপোলি শস্য' বলা হয়?","o":["রুই মাছ","ইলিশ মাছ","কাতলা মাছ","চিংড়ি মাছ"],"a":1,"h":"বর্ষাকালে বাঙালির সবচেয়ে বড় আকর্ষণ।"},{"q":"“নিজের গায়ে নেই প্রাণ, পরকে সে করায় গান”— এটি কিসের ইঙ্গিত?","o":["মোবাইল ফোন","রেডিও","বাঁশি","টেপরেকর্ডার"],"a":2,"h":"বাঁশ দিয়ে তৈরি ফুঁ দেওয়ার বাদ্যযন্ত্র।"},{"q":"'দিদি নম্বর ১' শো-তে মূল পর্বগুলোতে সাধারণত কটি রাউন্ডের খেলা অনুষ্ঠিত হয়?","o":["দুটি রাউন্ড","তিনটি রাউন্ড","পাঁচটি রাউন্ড","চারটি রাউন্ড"],"a":3,"h":"ভাগ্যচক্র থেকে পার্সোনাল রাউন্ড মিলিয়ে ৪টি পর্যায়।"},{"q":"“কয়লা ধুইলে কি ময়লা যায়”— প্রবাদের অন্তর্নিহিত অর্থ কী?","o":["স্বভাব সহজে বদলায় না","কয়লা সাবান দিয়ে ধুতে হয়","ময়লা জিনিস পরিষ্কার করা যায় না","কালো রঙ সাদা হয় না"],"a":0,"h":"মানুষের সহজাত কুঅভ্যাস সহজে দূর হয় না।"},{"q":"ঘরে ঝরঝরে পোলাও রান্নার সময় চাল ও জলের আদর্শ অনুপাত কত?","o":["১ কাপ চাল : ১ কাপ জল","১ কাপ চাল : ৪ কাপ জল","১ কাপ চাল : ১.৫ বা ২ কাপ জল","১ কাপ চাল : হাফ কাপ জল"],"a":2,"h":"জল চালের প্রায় ডাবল বা দেড়গুণ লাগে।"},{"q":"“ওরে গৃহবাসী, খোল দ্বার খোল”— গানটি কোন ঋতুর সঙ্গে সম্পর্কিত?","o":["বর্ষাকাল","শরৎকাল","শীতকাল","বসন্তকাল"],"a":3,"h":"শান্তিনিকেতনের দোল উৎসবের বিখ্যাত গান।"},{"q":"“এক ঘরে দুই ভাই, দেখা হয় না কভু ভাইয়ে ভাই”— এটি কী?","o":["চোখ","কান","জুতো জোড়া","হাতের তালু"],"a":0,"h":"এদের সাহায্যে আমরা পৃথিবী দেখি।"},{"q":"দুর্গাপূজায় দেবীর 'বোধন' সাধারণত কোন তিথিতে হয়?","o":["মহালয়া","ষষ্ঠী তিথি","সপ্তমী তিথি","পঞ্চমী তিথি"],"a":1,"h":"ঢাকের আওয়াজে দেবীর প্রথম আবাহন ও পূজার শুরু।"},{"q":"বাংলা বর্ষপঞ্জি অনুযায়ী বছরের প্রথম মাস কোনটি?","o":["ফাল্গুন","কার্তিক","বৈশাখ","চৈত্র"],"a":2,"h":"এই মাসেই ব্যবসায়ীরা 'হালখাতা' করেন।"},{"q":"উত্তম কুমার অভিনীত 'নায়ক' চলচ্চিত্রের পরিচালক কে?","o":["মৃণাল সেন","তপন সিনহা","ঋত্বিক ঘটক","সত্যজিৎ রায়"],"a":3,"h":"১৯৯২ সালে সম্মানসূচক অস্কার পাওয়া কিংবদন্তি বাঙালি পরিচালক।"},{"q":"আপনার বাবার ভাইয়ের একমাত্র ছেলের সাথে আপনার কী সম্পর্ক?","o":["জেঠতুতো বা খুড়তুতো ভাই","মামাতো ভাই","মাসতুতো ভাই","পিসতুতো ভাই"],"a":0,"h":"বাবার ছোট ভাই বা বড় ভাইয়ের ছেলে।"},{"q":"“যত টানো তত বাড়ে, ছাড়লে আবার ছোট হয়”— এটি কী?","o":["ছাতা","সুতো বা ইলাস্টিক","ঘুড়ির সুতো","ছায়া"],"a":1,"h":"পোশাকে বা চুলে আটকানো রাবার ব্যান্ড।"},{"q":"'দেবদাস' উপন্যাসের পার্বতীর ডাকনাম কী ছিল?","o":["চন্দ্রমুখী","কুসুম","পারু","রমা"],"a":2,"h":"দেবদাস যাকে ভালোবেসে ডাকতেন, 'প' দিয়ে শুরু।"},{"q":"'দিদি নম্বর ১'-এর মঞ্চে বিজয়ীর হাতে সাধারণত ট্রফির সাথে কী দেওয়া হয়?","o":["একটি রূপোর কয়েন","একটি নতুন স্মার্টফোন","একটি সোনার হার","গিফট হ্যাম্পার বা প্রাইজমানি"],"a":3,"h":"স্পনসরদের পক্ষ থেকে দেওয়া আকর্ষণীয় গিফট বক্স।"},{"q":"বর্ষাকালে নুন যাতে দলা পাকিয়ে না যায়, তার জন্য কী মিশিয়ে রাখা ভালো?","o":["কয়েক দানা চাল","এক চামচ চিনি","সামান্য হলুদ গুঁড়ো","এক ফোঁটা তেল"],"a":0,"h":"এই শস্যদানাটি লবণের বাড়তি আর্দ্রতা শুষে নেয়।"}],"s2":[{"q":"“জন্ম হয় জলে তার, বাস কিন্তু ডাঙায়— জল ছুলে প্রাণ যায়, বলতো সে কে ভাই?”","o":["নুন","মাছ","ব্যাঙ","বরফ"],"a":0,"h":"এটি রান্নার একটি অত্যন্ত প্রয়োজনীয় উপাদান।"},{"q":"বাঙালি সনাতন ধর্মে মা লক্ষ্মীর বাহন হিসেবে কোন পাখিকে পুজো করা হয়?","o":["ময়ূর","প্যাঁচা","হাঁস","কোকিল"],"a":1,"h":"এই নিশাচর পাখিটি রাতে খুব ভালো দেখে।"},{"q":"রবিবারের সকালে বরের কাছে বাজারের ফর্দ দেওয়ার সময় বাঙালি গিন্নিরা কোন কথাটা সবচেয়ে বেশি বলেন?","o":["আজ রান্না করব না","বাজার থেকে জামাকাপড় কিনে এনো","দেখে শুনে ভালো করে দরদাম করে আনবে","যা খুশি নিয়ে এসো"],"a":2,"h":"ভালো জিনিস কম দামে আনার চিরাচরিত নির্দেশ।"},{"q":"জনপ্রিয় গোয়েন্দা চরিত্র 'ফেলুদা'র আসল নাম কী?","o":["লালমোহন গাঙ্গুলী","তোপসে","প্রদোষ চন্দ্র মিত্র","ব্যোমকেশের নাম"],"a":2,"h":"ওনার নামের শর্ট ফর্ম হলো 'পি. সি. মিত্র'।"},{"q":"বাঙালি রান্নায় সুগন্ধ ও স্বাদের জন্য ব্যবহৃত 'পাঁচফোড়ন'-এর মধ্যে নিচের কোন উপাদানটি থাকে না?","o":["মেথি","মৌরি","ধনে","কালোজিরে"],"a":2,"h":"এর গুঁড়ো তরকারিতে খুব ব্যবহার হয়, কিন্তু পাঁচফোড়নে এটি থাকে না।"},{"q":"“তিন অক্ষরের নাম তার গাছে গাছে ফলে, মাঝের অক্ষর বাদ দিলে খাবার জিনিস বলে।”","o":["বাদাম","কাঁঠাল","আমড়া","পেয়ারা"],"a":0,"h":"শীতকালে বা ট্রেনে টাইমপাস করার জন্য খুব জনপ্রিয়।"},{"q":"জামাইষষ্ঠীর দিন শাশুড়ি মায়েরা জামাইয়ের দীর্ঘায়ু কামনায় কোন গাছের পাতা দিয়ে হাওয়া করেন?","o":["কলা পাতা","তালপাতা","আম পাতা","পদ্ম পাতা"],"a":1,"h":"গ্রামীণ বাংলার ঐতিহ্যবাহী হাতপাখার পাতা।"},{"q":"'দিদি নম্বর ১' শো-এর একটি অতি জনপ্রিয় মিউজিক্যাল রাউন্ড, যেখানে গান শুনে সিনেমার নাম বলতে হয়, তার নাম কী?","o":["লটারি রাউন্ড","রান্না রাউন্ড","গান চেনা বা মিউজিক রাউন্ড","ধাঁধা রাউন্ড"],"a":2,"h":"স্পিকারে গান বাজা মাত্রই দ্রুত বাজ়ার চাপতে হয়।"},{"q":"“নাচতে না জানলে উঠোন বাঁকা”— এই প্রবাদের আসল মানে কী?","o":["নিজের দোষ অন্যের ওপর চাপানো","উঠোন ধরে নাচ করা","নাচের স্কুল খোলা","বাঁকা উঠোনে বসে থাকা"],"a":0,"h":"নিজে না পারলে পারিপার্শ্বিক পরিস্থিতির দোষ দেওয়া।"},{"q":"হঠাৎ বাড়িতে অতিথি চলে এসেছে কিন্তু ঘরে মিষ্টি নেই। ফ্রিজে শুধু দুধ আর লেবু আছে। ঝটপট কী মিষ্টি বানানো সম্ভব?","o":["লাড্ডু","ছানার সন্দেশ","জিলিপি","সোয়ান পাপড়ি"],"a":1,"h":"দুধে লেবু দিলে দুধ কেটে যা তৈরি হয় তা দিয়ে মিষ্টি।"},{"q":"“পাখি নয় ওড়ে সে, ওত পেতে থাকে সে, রক্ত চোষা নাম তার, রাতে বেশি ডাকে সে।”","o":["বাদুড়","মশা","বুলবুলি","প্যাঁচা"],"a":1,"h":"এর হাত থেকে বাঁচতে আমরা মশারি ব্যবহার করি।"},{"q":"বাঙালির অত্যন্ত প্রিয় উইকএন্ড ডেস্টিনেশন 'দিঘা' কোন সাগরের উপকূলে অবস্থিত?","o":["আরব সাগর","বঙ্গোপসাগর","ভারত মহাসাগর","প্রশান্ত মহাসাগর"],"a":1,"h":"পশ্চিমবঙ্গের উপকূলের এই সাগরেই দিঘা অবস্থিত।"},{"q":"ছোটদের জনপ্রিয় চরিত্র 'ঘনাদা'র স্রষ্টা কে?","o":["নারায়ণ দেবনাথ","প্রেমেন্দ্র মিত্র","সুকুমার রায়","সুনীল গঙ্গোপাধ্যায়"],"a":1,"h":"মেসের টং রুমে বসে যিনি অসম্ভব সব গুলগল্প শোনাতেন।"},{"q":"বাঙালি বিবাহে কনের মামা বা ভাইয়েরা কনেকে পিঁড়িতে বসিয়ে বরের চারপাশে কতবার ঘোরান?","o":["৩ বার","৫ বার","৭ বার","১ বার"],"a":2,"h":"হিন্দু বিয়ের এই বিশেষ আচারকে বলা হয় 'সাতপাক'।"},{"q":"ভাইফোঁটা বা ভ্রাতৃদ্বিতীয়ার দিন বোনেরা ভাইয়ের কপালে ফোঁটা দেওয়ার সময় কোন আঙুলটি ব্যবহার করেন?","o":["বুড়ো আঙুল","অনামিকা","তর্জনী","মধ্যমা"],"a":1,"h":"ডানহাতের যে আঙুলে সাধারণত আংটি পরা হয়।"},{"q":"আপনার মায়ের বোনের স্বামীর একমাত্র মেয়ে আপনার কী হয়?","o":["মাসতুতো বোন","পিসতুতো বোন","মামাতো বোন","তুতো ভাই"],"a":0,"h":"আপনি যাঁর বাড়ি বেড়াতে গেলে 'মাসিমা' বলে ডাকেন।"},{"q":"বাংলা সিনেমা 'ভূতের ভবিষ্যৎ'-এর পরিচালক কে?","o":["রাজ চক্রবর্তী","অনিক দত্ত","সৃজিত মুখার্জি","কৌশিক গাঙ্গুলী"],"a":1,"h":"সত্যজিৎ রায়ের শতবর্ষে যিনি 'অপরাজিত' ছবি বানান।"},{"q":"বাজারে গিয়ে ১ কেজি মাছের দাম যদি ৪৫০ টাকা হয়, তবে ২০০ গ্রাম মাছের দাম কত হবে?","o":["৮০ টাকা","৯০ টাকা","১০০ টাকা","৫০ টাকা"],"a":1,"h":"১ কেজির দামকে ৫ দিয়ে ভাগ করলেই উত্তর মিলবে।"},{"q":"তরকারিতে ভুল করে নুন বেশি হয়ে গেলে, দিদিরা ঝটপট কোন জিনিসটির ছোট গোল বল বানিয়ে তরকারিতে দিয়ে দেন নুন কমাতে?","o":["কাঁচা আটার লেচি বা মাখা ময়দা","চিনির দলা","এক টুকরো বরফ","গোটা লঙ্কা"],"a":0,"h":"যা দিয়ে আমরা রোজ সকালে রুটি বা লুচি তৈরি করি।"},{"q":"'দিদি নম্বর ১' শো-তে যখন কোনো প্রতিযোগী দিদি খুব ভালো খেলেন বা দারুণ গল্প বলেন, তখন সঞ্চালিকা রচনা বন্দ্যোপাধ্যায় আনন্দের চোটে দিদিকে জড়িয়ে ধরে কোন শব্দ বা আচরণটি করেন?","o":["গম্ভীর থাকেন","বকা দেন","পরম আদরে জড়িয়ে ধরেন (Hug করেন)","স্টেজ থেকে নেমে যান"],"a":2,"h":"ভালোবাসায় প্রতিযোগীকে বুকে টেনে নেওয়ার ইংরেজি রূপ।"}]};
+const SETS = {
+  "demo": {label:"অনুশীলন", questions:QS.demo, save:false},
+  "1":    {label:"সেট ১", questions:QS.s1, save:true},
+  "2":    {label:"সেট ২", questions:QS.s2, save:true}
+};
+const LETTERS = ["ক","খ","গ","ঘ"];
+const $ = id => document.getElementById(id);
+const SCREENS = ["homeScreen","entryScreen","readyScreen","resumeScreen","quizScreen","completeScreen","resultScreen"];
+const REDUCED = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+function show(id){ SCREENS.forEach(x => $(x).classList.toggle("hidden", x !== id)); document.body.classList.toggle("playing", id === "quizScreen"); window.scrollTo(0,0); }
+function bn(n){ return String(n).replace(/\d/g, d => "০১২৩৪৫৬৭৮৯"[+d]); }
+function esc(s){ return String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c])); }
+function duration(ms){
+  const t = Math.max(0, Math.round(ms/1000)), h = Math.floor(t/3600), m = Math.floor(t%3600/60), s = t%60;
+  return (h ? bn(h)+" ঘণ্টা " : "") + (m ? bn(m)+" মিনিট " : "") + bn(s) + " সেকেন্ড";
+}
+function uid(){ return Date.now().toString(36) + "-" + Math.random().toString(36).slice(2,10); }
+
+/* ---------- safe localStorage ---------- */
+const store = {
+  get(k){ try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : null; } catch(e){ return null; } },
+  set(k,v){ try { localStorage.setItem(k, JSON.stringify(v)); } catch(e){} },
+  del(k){ try { localStorage.removeItem(k); } catch(e){} }
+};
+const PROGRESS_KEY = s => "jq2026_progress_set" + s;
+const OUTBOX_KEY = "jq2026_outbox";
+
+/* ================= decoration: lights, alpana, sound, petals ================= */
+const SVGNS = "http://www.w3.org/2000/svg";
+function svgEl(tag, attrs){ const e = document.createElementNS(SVGNS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); return e; }
+const BULB_COLORS = ["#ffd86b","#ff6a6a","#7ee0ff","#ffad1f","#b6ff8a"];
+// Draws a sagging string of n bulbs; returns the bulb elements.
+function drawLights(svg, n, colorful){
+  svg.innerHTML = "";
+  const defs = svgEl("defs", {}), f = svgEl("filter", {id:"glow", x:"-100%", y:"-100%", width:"300%", height:"300%"});
+  const blur = svgEl("feGaussianBlur", {stdDeviation:"2.2", result:"b"}), merge = svgEl("feMerge", {});
+  merge.appendChild(svgEl("feMergeNode", {in:"b"})); merge.appendChild(svgEl("feMergeNode", {in:"SourceGraphic"}));
+  f.appendChild(blur); f.appendChild(merge); defs.appendChild(f); svg.appendChild(defs);
+  const W = 360, pad = 10, sag = 14, top = 8, y = x => top + sag*Math.sin(Math.PI*(x-pad)/(W-2*pad));
+  let d = "M" + pad + " " + top; for (let x = pad; x <= W-pad; x += 6) d += " L" + x + " " + y(x).toFixed(1);
+  svg.appendChild(svgEl("path", {d, class:"wire"}));
+  const bulbs = [];
+  for (let i = 0; i < n; i++){
+    const x = pad + (W-2*pad) * (n === 1 ? .5 : (i + .5)/n), yy = y(x);
+    svg.appendChild(svgEl("line", {x1:x, y1:yy, x2:x, y2:yy+7, stroke:"#7d4b5f", "stroke-width":1.2}));
+    const b = svgEl("ellipse", {cx:x, cy:yy+13, rx:Math.min(5.2, 140/n), ry:Math.min(7, 190/n), class:"bulb",
+      fill: colorful ? BULB_COLORS[i % BULB_COLORS.length] : "#5a3a4b", filter: colorful ? "url(#glow)" : ""});
+    if (colorful) b.style.animationDelay = (i * 0.17 % 2.6).toFixed(2) + "s";
+    svg.appendChild(b); bulbs.push(b);
+  }
+  return bulbs;
+}
+function drawAlpana(){
+  const g = $("alpana"), st = {fill:"none", stroke:"#fff5e3", "stroke-width":1.6};
+  [92, 70, 30].forEach(r => g.appendChild(svgEl("circle", Object.assign({cx:0, cy:0, r}, st))));
+  for (let i = 0; i < 16; i++){
+    const a = i * Math.PI / 8, c = Math.cos(a), s = Math.sin(a);
+    const p = (r1, r2, w) => "M" + (c*r1).toFixed(1) + " " + (s*r1).toFixed(1) + " Q" + (c*(r1+r2)/2 - s*w).toFixed(1) + " " + (s*(r1+r2)/2 + c*w).toFixed(1) + " " + (c*r2).toFixed(1) + " " + (s*r2).toFixed(1) +
+      " Q" + (c*(r1+r2)/2 + s*w).toFixed(1) + " " + (s*(r1+r2)/2 - c*w).toFixed(1) + " " + (c*r1).toFixed(1) + " " + (s*r1).toFixed(1);
+    g.appendChild(svgEl("path", Object.assign({d:p(30, 70, 11)}, st)));
+    if (i % 2 === 0) g.appendChild(svgEl("path", Object.assign({d:p(70, 92, 6)}, st)));
+    g.appendChild(svgEl("circle", {cx:(c*80).toFixed(1), cy:(s*80).toFixed(1), r:2.2, fill:"#fff5e3"}));
+  }
+}
+
+/* background: red stippled sun-rays on cream, drawn once on the phone (no image to download) */
+function drawBackground(){
+  const cv = $("bg"), W = innerWidth, H = Math.max(innerHeight, (screen && screen.height) || 0, 640);
+  const dpr = Math.min(2, window.devicePixelRatio || 1);
+  cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr); cv.style.height = H + "px";
+  const cx = cv.getContext("2d"); cx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  cx.fillStyle = "#f4ecc9"; cx.fillRect(0, 0, W, H);
+  let seed = 20261121; const rnd = () => { seed = (seed + 0x6D2B79F5) | 0; let t = Math.imul(seed ^ seed >>> 15, 1 | seed); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; };
+  const sm = (a, b, x) => { const t = Math.min(1, Math.max(0, (x - a) / (b - a))); return t * t * (3 - 2 * t); };
+  const ox = W / 2, oy = H * 0.80;                 // the rays fan out from here
+  const PERIOD = 11 * Math.PI / 180;              // angle from one cream ray to the next
+  const STEP = 2.5;                                // dot grid spacing (px)
+  cx.fillStyle = "#d81b23"; cx.beginPath();
+  for (let gy = 0; gy < H; gy += STEP){
+    for (let gx = 0; gx < W; gx += STEP){
+      const x = gx + (rnd() - .5) * STEP * .8, y = gy + (rnd() - .5) * STEP * .8;
+      const dx = x - ox, dy = oy - y;
+      const ang = Math.atan2(dx, Math.max(dy, 0.0001)), dist = Math.hypot(dx, dy) / oy;   // 1 = top centre
+      if (dy <= 0 && Math.abs(dx) < 1) continue;
+      const c = Math.cos(ang / PERIOD * 2 * Math.PI);           // 1 = centre of a cream ray
+      const ray = Math.pow((c + 1) / 2, 2.2);
+      const start = 0.16 + 0.66 * ray;                           // red begins farther out inside a ray
+      let p = Math.pow(sm(start, start + 0.78, dist), 1.25);
+      p = Math.max(p, sm(0.16, 0.0, y / H) * 0.95);              // solid band along the top edge
+      if (p < 0.03 || rnd() > Math.min(1, p * 1.6)) continue;
+      const r = 0.45 + 1.3 * Math.sqrt(p);
+      cx.moveTo(x + r, y); cx.arc(x, y, r, 0, 6.2832);
+    }
+  }
+  cx.fill();
+}
+let bgW = 0;
+function maybeRedrawBg(){ if (innerWidth !== bgW){ bgW = innerWidth; drawBackground(); } }
+window.addEventListener("resize", () => { clearTimeout(window.__bgT); window.__bgT = setTimeout(maybeRedrawBg, 250); });
+
+/* sound: tiny synthesised dhak / tick / chime, no files to load */
+let soundOn = store.get("jq2026_sound") !== false, actx = null;
+function ac(){ if (!soundOn) return null; try { actx = actx || new (window.AudioContext || window.webkitAudioContext)(); if (actx.state === "suspended") actx.resume(); return actx; } catch(e){ return null; } }
+function tone(freq, dur, type, vol, slideTo, when){
+  const a = ac(); if (!a) return;
+  const t = a.currentTime + (when || 0), o = a.createOscillator(), g = a.createGain();
+  o.type = type || "sine"; o.frequency.setValueAtTime(freq, t); if (slideTo) o.frequency.exponentialRampToValueAtTime(slideTo, t + dur);
+  g.gain.setValueAtTime(vol || .2, t); g.gain.exponentialRampToValueAtTime(.0001, t + dur);
+  o.connect(g); g.connect(a.destination); o.start(t); o.stop(t + dur + .02);
+}
+const sfx = {
+  dhak(){ tone(140, .28, "sine", .55, 55); tone(320, .06, "triangle", .12, 90); },
+  tick(){ tone(1250, .04, "square", .05); },
+  open(){ tone(660, .09, "sine", .12); tone(990, .12, "sine", .1, null, .08); },
+  good(){ tone(784, .14, "sine", .16); tone(1175, .22, "sine", .14, null, .1); },
+  bad(){ tone(220, .25, "sawtooth", .07, 140); },
+  finale(){ [523, 659, 784, 1047].forEach((f, i) => tone(f, .35, "sine", .14, null, i * .13)); }
+};
+function buzz(ms){ try { if (navigator.vibrate) navigator.vibrate(ms); } catch(e){} }
+function paintSoundBtn(){
+  $("soundBtn").innerHTML = soundOn
+    ? '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 9h4l5-4v14l-5-4H4z" fill="currentColor"/><path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/></svg>'
+    : '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 9h4l5-4v14l-5-4H4z" fill="currentColor"/><path d="M17 9l5 6M22 9l-5 6"/></svg>';
+  $("soundBtn").setAttribute("aria-pressed", soundOn ? "true" : "false");
+}
+$("soundBtn").addEventListener("click", () => { soundOn = !soundOn; store.set("jq2026_sound", soundOn); paintSoundBtn(); if (soundOn) sfx.open(); });
+
+/* marigold petal shower */
+function petals(amount){
+  if (REDUCED) return;
+  const cv = $("petals"), cx = cv.getContext("2d"), dpr = Math.min(2, window.devicePixelRatio || 1);
+  cv.width = innerWidth * dpr; cv.height = innerHeight * dpr; cx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  const cols = ["#ffad1f","#ffc93c","#ff8c1a","#e3262e","#fff5e3"];
+  const ps = Array.from({length:amount}, () => ({x:Math.random()*innerWidth, y:-20 - Math.random()*innerHeight*.6, r:4 + Math.random()*5,
+    vy:1.6 + Math.random()*2.2, vx:-.6 + Math.random()*1.2, a:Math.random()*6.28, va:-.08 + Math.random()*.16, c:cols[Math.random()*cols.length|0]}));
+  const end = Date.now() + 4200;
+  (function frame(){
+    cx.clearRect(0, 0, innerWidth, innerHeight);
+    const fading = Date.now() > end - 900;
+    ps.forEach(p => {
+      p.y += p.vy; p.x += p.vx + Math.sin(p.y/30)*.6; p.a += p.va;
+      cx.save(); cx.translate(p.x, p.y); cx.rotate(p.a); cx.globalAlpha = fading ? Math.max(0, (end - Date.now())/900) : 1;
+      cx.fillStyle = p.c; cx.beginPath(); cx.ellipse(0, 0, p.r, p.r*.55, 0, 0, 6.283); cx.fill(); cx.restore();
+    });
+    if (Date.now() < end) requestAnimationFrame(frame); else cx.clearRect(0, 0, innerWidth, innerHeight);
+  })();
+}
+
+/* ================= page set from link ================= */
+const params = new URLSearchParams(location.search);
+const rawSet = (params.get("set") || "").trim().toLowerCase();
+const PAGE_SET = SETS[rawSet] ? rawSet : null;
+
+let player = {name:"", phone:""};
+let run = null;      // the quiz currently on screen
+let loop = null;
+let lastResult = null;
+let quizBulbs = [];
+const RING_LEN = 2 * Math.PI * 52;
+
+/* ---------- phone number cleanup (accepts Bengali digits, +91, 0, spaces) ---------- */
+function cleanPhone(raw){
+  let d = String(raw).replace(/[০-৯]/g, c => "০১২৩৪৫৬৭৮৯".indexOf(c)).replace(/\D/g, "");
+  if (d.length === 12 && d.startsWith("91")) d = d.slice(2);
+  else if (d.length === 11 && d.startsWith("0")) d = d.slice(1);
+  return /^[6-9]\d{9}$/.test(d) ? d : null;
+}
+
+/* ---------- start-up ---------- */
+function boot(){
+  flushOutbox();
+  if (!PAGE_SET){ show("homeScreen"); return; }
+  if (PAGE_SET === "demo"){ prepareReady(); return; }
+  const saved = store.get(PROGRESS_KEY(PAGE_SET));
+  if (saved && Array.isArray(saved.answers) && saved.answers.length === SETS[PAGE_SET].questions.length){
+    $("resumeTitle").textContent = saved.name;
+    $("resumeInfo").textContent = "এই ফোনে " + SETS[PAGE_SET].label + "-এর কুইজটি প্রশ্ন " + bn(saved.idx + 1) + "-এ থেমে গিয়েছিল। যেখান থেকে থেমেছিল সেখান থেকেই চালিয়ে যান।";
+    show("resumeScreen");
+    return;
+  }
+  show("entryScreen");
+}
+
+$("entryForm").addEventListener("submit", e => {
+  e.preventDefault();
+  const name = $("playerName").value.replace(/\s+/g, " ").trim();
+  const phone = cleanPhone($("playerPhone").value);
+  if (name.length < 2){ alert("অনুগ্রহ করে আপনার নাম লিখুন।"); $("playerName").focus(); return; }
+  if (!phone){ alert("অনুগ্রহ করে ১০ সংখ্যার সঠিক মোবাইল নম্বর লিখুন।"); $("playerPhone").focus(); return; }
+  player = {name, phone};
+  sfx.open();
+  prepareReady();
+});
+
+function prepareReady(){
+  const isDemoPage = PAGE_SET === "demo";
+  $("welcomeName").textContent = isDemoPage ? "অনুশীলন কুইজ" : "স্বাগতম, " + player.name + "!";
+  $("readyInfo").textContent = isDemoPage
+    ? "৫টি সহজ প্রশ্নে দেখে নিন কীভাবে খেলতে হয়। প্রতিটি উত্তরের পর সঙ্গে সঙ্গে দেখাবে ঠিক না ভুল। এর ফলাফল কোথাও জমা হয় না।"
+    : SETS[PAGE_SET].label + " — মোট " + bn(SETS[PAGE_SET].questions.length) + "টি প্রশ্ন।";
+  $("startRealBtn").classList.toggle("hidden", isDemoPage);
+  $("startDemoBtn").textContent = isDemoPage ? "অনুশীলন শুরু করুন" : "আগে অনুশীলন করুন";
+  $("startDemoBtn").classList.toggle("sindoor", isDemoPage);
+  $("readyNote").classList.toggle("hidden", isDemoPage);
+  show("readyScreen");
+}
+
+$("startDemoBtn").addEventListener("click", () => startRun("demo"));
+$("startRealBtn").addEventListener("click", () => startRun(PAGE_SET));
+$("demoToRealBtn").addEventListener("click", () => startRun(PAGE_SET));
+
+$("resumeBtn").addEventListener("click", () => {
+  const s = store.get(PROGRESS_KEY(PAGE_SET));
+  if (!s){ show("entryScreen"); return; }
+  player = {name:s.name, phone:s.phone};
+  run = {setKey:PAGE_SET, qs:SETS[PAGE_SET].questions, answers:s.answers, idx:s.idx, startAt:s.startAt, id:s.id, real:true};
+  if (run.idx < run.qs.length && run.answers[run.idx] !== null) run.idx++;  // answered just before the page closed
+  enterQuiz();
+});
+
+$("abandonBtn").addEventListener("click", () => {
+  if (!confirm("আগের প্রতিযোগীর অসম্পূর্ণ কুইজটি যেমন আছে তেমনই জমা হয়ে যাবে। নিশ্চিত?")) return;
+  const s = store.get(PROGRESS_KEY(PAGE_SET));
+  if (s){
+    const r = {setKey:PAGE_SET, qs:SETS[PAGE_SET].questions, answers:s.answers, idx:s.idx, startAt:s.startAt, id:s.id, real:true};
+    queueResult(r, {name:s.name, phone:s.phone}, false, Date.now());
+  }
+  store.del(PROGRESS_KEY(PAGE_SET));
+  resetForm();
+  show("entryScreen");
+});
+
+function resetForm(){ $("playerName").value = ""; $("playerPhone").value = ""; player = {name:"", phone:""}; }
+
+/* ---------- running a quiz ---------- */
+function startRun(setKey){
+  const real = setKey !== "demo";
+  const qs = SETS[setKey].questions;
+  run = {setKey, qs, answers:Array(qs.length).fill(null), idx:0, startAt:Date.now(), id:uid(), real};
+  if (real) saveProgress();
+  sfx.dhak();
+  enterQuiz();
+}
+
+function enterQuiz(){
+  $("demoTag").classList.toggle("hidden", run.real);
+  $("playerTag").textContent = run.real ? player.name : "";
+  quizBulbs = drawLights($("quizLights"), run.qs.length, false);
+  show("quizScreen");
+  renderQuestion();
+}
+
+function saveProgress(){
+  store.set(PROGRESS_KEY(run.setKey), {name:player.name, phone:player.phone, answers:run.answers, idx:run.idx, startAt:run.startAt, id:run.id});
+}
+
+function paintBulbs(){
+  quizBulbs.forEach((b, i) => {
+    b.classList.remove("on", "now", "miss");
+    if (i < run.idx) b.classList.add(run.answers[i] === null ? "miss" : "on");
+    else if (i === run.idx) b.classList.add("now");
+  });
+}
+
+function setRing(frac){
+  $("ring").style.strokeDasharray = RING_LEN.toFixed(1);
+  $("ring").style.strokeDashoffset = (RING_LEN * (1 - Math.max(0, Math.min(1, frac)))).toFixed(1);
+}
+
+function renderQuestion(){
+  clearInterval(loop);
+  if (run.idx >= run.qs.length){ finishRun(); return; }
+  const q = run.qs[run.idx], total = run.qs.length;
+  run.phase = "read";
+  run.phaseEnd = Date.now() + READ_SECONDS*1000;
+  run.shown = null;
+  paintBulbs();
+  $("qCounter").textContent = "প্রশ্ন " + bn(run.idx+1) + " / " + bn(total);
+  $("questionText").textContent = q.q;
+  const box = $("options"); box.innerHTML = ""; box.className = "options locked";
+  q.o.forEach((text, i) => {
+    const b = document.createElement("button");
+    b.type = "button"; b.className = "opt"; b.disabled = true;
+    b.innerHTML = '<span class="letter">' + LETTERS[i] + '</span><span>' + esc(text) + '</span>';
+    b.addEventListener("click", () => choose(i));
+    box.appendChild(b);
+  });
+  $("hintBox").classList.add("hidden");
+  $("ringWrap").className = "ring-wrap";
+  $("phaseText").textContent = "প্রশ্নটি পড়ুন";
+  $("statusText").textContent = "পড়ার সময় উত্তর বাছা যাবে না।";
+  tick();
+  loop = setInterval(tick, 200);
+}
+
+function tick(){
+  if (!run || run.done) return;
+  const now = Date.now();
+  if (now >= run.phaseEnd){
+    if (run.phase === "read"){
+      // start the answer window from NOW (so a phone that slept does not lose the question)
+      run.phase = "answer";
+      run.phaseEnd = now + ANSWER_SECONDS*1000;
+      run.shown = null;
+      $("ringWrap").className = "ring-wrap answer";
+      $("phaseText").textContent = "এবার উত্তর দিন";
+      $("hintBox").textContent = "ইঙ্গিত: " + run.qs[run.idx].h;
+      $("hintBox").classList.remove("hidden");
+      $("statusText").textContent = "সঠিক উত্তরে চাপ দিন।";
+      $("options").className = "options open";
+      [...$("options").children].forEach(b => b.disabled = false);
+      sfx.open(); buzz(20);
+    } else {
+      buzz(60);
+      nextQuestion();
+      return;
+    }
+  }
+  const msLeft = Math.max(0, run.phaseEnd - now), phaseLen = (run.phase === "read" ? READ_SECONDS : ANSWER_SECONDS) * 1000;
+  setRing(msLeft / phaseLen);
+  const left = Math.ceil(msLeft/1000);
+  if (left !== run.shown){
+    run.shown = left;
+    $("timer").textContent = bn(left);
+    const urgent = run.phase === "answer" && left <= 5;
+    $("ringWrap").classList.toggle("urgent", urgent);
+    if (urgent && left > 0) sfx.tick();
+  }
+}
+
+function choose(i){
+  if (!run || run.phase !== "answer" || run.answers[run.idx] !== null || run.locked) return;
+  run.locked = true;
+  run.answers[run.idx] = i;
+  clearInterval(loop);
+  const opts = [...$("options").children], q = run.qs[run.idx];
+  opts.forEach(b => b.disabled = true);
+  buzz(30);
+  if (run.real){
+    opts[i].classList.add("selected");
+    sfx.dhak();
+    $("statusText").textContent = "উত্তর নেওয়া হয়েছে। পরের প্রশ্ন আসছে…";
+    saveProgress();
+    setTimeout(nextQuestion, 450);
+  } else {
+    // practice round: show right / wrong straight away
+    const ok = i === q.a;
+    opts[q.a].classList.add("right");
+    if (!ok) opts[i].classList.add("bad");
+    if (ok) sfx.good(); else sfx.bad();
+    $("statusText").textContent = ok ? "ঠিক উত্তর! দারুণ।" : "ভুল হলো — সঠিক উত্তর সবুজ রঙে দেখানো হলো।";
+    setTimeout(nextQuestion, 1200);
+  }
+}
+
+function nextQuestion(){
+  clearInterval(loop);
+  run.locked = false;
+  run.idx++;
+  if (run.real) saveProgress();
+  renderQuestion();
+}
+
+function scoreOf(r){ return r.answers.reduce((n, a, i) => n + (a === r.qs[i].a ? 1 : 0), 0); }
+
+function finishRun(){
+  clearInterval(loop);
+  run.done = true;
+  run.endAt = Date.now();
+  quizBulbs.forEach((b, i) => { b.classList.remove("now"); b.classList.add(run.answers[i] === null ? "miss" : "on"); });
+  const total = run.qs.length;
+  if (run.real){
+    store.del(PROGRESS_KEY(run.setKey));
+    const entry = queueResult(run, player, true, run.endAt);
+    lastResult = {run, player:{...player}, entryId:entry.id};
+    $("completeBadge").textContent = bn(total) + "টি প্রশ্ন শেষ!";
+    $("completeText").textContent = "আপনার উত্তর ও সময় জমা দেওয়া হচ্ছে। কত পেলেন দেখতে নিচে চাপুন।";
+    $("saveBox1").classList.remove("hidden");
+  } else {
+    lastResult = {run, player:{...player}, entryId:null};
+    $("completeBadge").textContent = "অনুশীলন শেষ!";
+    $("completeText").textContent = "এটা ছিল অনুশীলন, তাই ফলাফল কোথাও জমা হয়নি।";
+    $("saveBox1").classList.add("hidden");
+  }
+  sfx.finale();
+  renderSaveStatus();
+  show("completeScreen");
+}
+
+$("showResultBtn").addEventListener("click", showResult);
+
+function showResult(){
+  const {run:r, player:p} = lastResult;
+  const total = r.qs.length, score = scoreOf(r);
+  $("resultTitle").textContent = r.real ? "আপনার ফলাফল — " + SETS[r.setKey].label : "অনুশীলনের ফলাফল";
+  $("resultPlayer").innerHTML = r.real ? esc(p.name) + " · " + esc(p.phone) : "";
+  $("scoreText").textContent = bn(score) + " / " + bn(total);
+  $("scoreCaption").textContent = "সঠিক " + bn(score) + "টি · ভুল বা উত্তর দেননি " + bn(total - score) + "টি";
+  $("elapsedText").textContent = "মোট সময়: " + duration(r.endAt - r.startAt);
+  $("saveBox2").classList.toggle("hidden", !r.real);
+  $("realActions").classList.toggle("hidden", !r.real);
+  $("afterDemo").classList.toggle("hidden", r.real || PAGE_SET === "demo");
+  $("newPlayerBtn").textContent = PAGE_SET === "demo" ? "আবার অনুশীলন করুন" : "নতুন প্রতিযোগী";
+  $("newPlayerBtn").classList.toggle("hidden", !r.real && PAGE_SET !== "demo");
+  const reveal = SHOW_ANSWERS || !r.real;
+  $("answerReview").innerHTML = r.qs.map((q, i) => {
+    const a = r.answers[i], ok = a === q.a;
+    const cls = a === null ? "unanswered" : ok ? "correct" : "wrong";
+    const mine = a === null ? "উত্তর দেওয়া হয়নি" : LETTERS[a] + ") " + esc(q.o[a]) + (ok ? " ✓ সঠিক" : " ✗ ভুল");
+    return '<div class="result-row"><b>' + bn(i+1) + ". " + esc(q.q) + '</b><div class="' + cls + '">আপনার উত্তর: ' + mine + "</div>" +
+      (reveal ? '<div class="correct">সঠিক উত্তর: ' + LETTERS[q.a] + ") " + esc(q.o[q.a]) + "</div>" : "") + "</div>";
+  }).join("");
+  renderSaveStatus();
+  show("resultScreen");
+  revealLights(r, score);
+}
+
+// The one big moment: bulbs light up green/red one by one while the score counts up, then petals fall.
+function revealLights(r, score){
+  const bulbs = drawLights($("resultLights"), r.qs.length, false), total = r.qs.length;
+  const step = REDUCED ? 0 : Math.min(140, 2200 / total);
+  let shown = 0;
+  if (step) $("scoreText").textContent = bn(0) + " / " + bn(total);
+  r.qs.forEach((q, i) => {
+    const a = r.answers[i], cls = a === null ? "res-miss" : a === q.a ? "res-ok" : "res-bad";
+    setTimeout(() => {
+      bulbs[i].classList.add(cls);
+      if (cls === "res-ok"){ shown++; $("scoreText").textContent = bn(shown) + " / " + bn(total); tone(500 + shown*40, .08, "sine", .08); }
+    }, step * (i + 1));
+  });
+  setTimeout(() => {
+    $("scoreText").textContent = bn(score) + " / " + bn(total);
+    if (score / total >= .5) petals(score === total ? 140 : 80);
+  }, step * (total + 1));
+}
+
+$("newPlayerBtn").addEventListener("click", () => {
+  run = null; lastResult = null; resetForm();
+  if (!PAGE_SET || PAGE_SET === "demo"){ boot(); return; }
+  show("entryScreen");
+});
+
+/* ---------- saving to Google Sheet ---------- */
+function queueResult(r, p, complete, endAt){
+  const score = scoreOf(r);
+  const entry = {
+    id: r.id, set: r.setKey, name: p.name, phone: p.phone,
+    score, total: r.qs.length, seconds: Math.round((endAt - r.startAt)/1000),
+    timeText: duration(endAt - r.startAt), complete,
+    answers: r.answers.map((a, i) => a === null ? "—" : LETTERS[a] + (a === r.qs[i].a ? " ✓" : " ✗")),
+    startedAt: new Date(r.startAt).toISOString(), finishedAt: new Date(endAt).toISOString()
+  };
+  const box = store.get(OUTBOX_KEY) || [];
+  if (!box.some(x => x.id === entry.id)) box.push(entry);
+  store.set(OUTBOX_KEY, box);
+  memOutbox.set(entry.id, entry);
+  saveState[entry.id] = "wait";
+  flushOutbox();
+  return entry;
+}
+
+const memOutbox = new Map();   // backup if localStorage is unavailable
+const saveState = {};          // id -> "wait" | "ok" | "err" | "nourl"
+let flushing = false;
+
+function pendingEntries(){
+  const box = store.get(OUTBOX_KEY) || [];
+  memOutbox.forEach((e, id) => { if (!box.some(x => x.id === id)) box.push(e); });
+  return box;
+}
+
+async function postEntry(entry){
+  const body = JSON.stringify(entry);
+  let res;
+  try {
+    res = await fetch(SCRIPT_URL, {method:"POST", body, redirect:"follow"});
+  } catch(e){
+    // Response could not be read (network/CORS). Send once more without reading the reply;
+    // the sheet ignores duplicates of the same id.
+    try { await fetch(SCRIPT_URL, {method:"POST", body, mode:"no-cors"}); return true; }
+    catch(e2){ return false; }
+  }
+  try { const j = await res.json(); return !!(j && j.ok); } catch(e){ return false; }
+}
+
+async function flushOutbox(){
+  if (flushing) return;
+  if (!/^https:\/\//.test(SCRIPT_URL)){ pendingEntries().forEach(e => saveState[e.id] = "nourl"); renderSaveStatus(); return; }
+  flushing = true;
+  try {
+    for (const entry of pendingEntries()){
+      const ok = await postEntry(entry);
+      saveState[entry.id] = ok ? "ok" : "err";
+      if (ok){
+        memOutbox.delete(entry.id);
+        store.set(OUTBOX_KEY, (store.get(OUTBOX_KEY) || []).filter(x => x.id !== entry.id));
+      }
+      renderSaveStatus();
+    }
+  } finally { flushing = false; }
+}
+
+function renderSaveStatus(){
+  if (!lastResult || !lastResult.entryId) return;
+  const st = saveState[lastResult.entryId] || "wait";
+  const text = {
+    wait: "ফলাফল জমা দেওয়া হচ্ছে… পেজটি বন্ধ করবেন না।",
+    ok:   "✓ আপনার ফলাফল জমা হয়েছে। ধন্যবাদ!",
+    err:  "এখনও জমা হয়নি — ইন্টারনেট সংযোগ দেখুন। সংযোগ এলে নিজে থেকেই আবার চেষ্টা হবে, পেজটি বন্ধ করবেন না।",
+    nourl:"ফলাফল জমার লিংক (SCRIPT_URL) এখনও বসানো হয়নি — আয়োজকদের জানান।"
+  }[st];
+  const cls = st === "ok" ? "ok" : st === "wait" ? "wait" : "err";
+  ["saveBox1","saveBox2"].forEach(id => { $(id).textContent = text; $(id).className = "save " + cls + ($(id).classList.contains("hidden") ? " hidden" : ""); });
+}
+
+setInterval(() => { if (pendingEntries().length) flushOutbox(); }, 15000);
+window.addEventListener("online", flushOutbox);
+
+/* ---------- answer sheet download & WhatsApp ---------- */
+function reportHtml(){
+  const {run:r, player:p} = lastResult, total = r.qs.length, score = scoreOf(r);
+  const rows = r.qs.map((q, i) => {
+    const a = r.answers[i], ok = a === q.a;
+    const cls = a === null ? "miss" : ok ? "good" : "bad";
+    const mine = a === null ? "উত্তর দেওয়া হয়নি" : LETTERS[a] + ") " + esc(q.o[a]) + (ok ? " ✓ সঠিক" : " ✗ ভুল");
+    return '<div class="q"><b>' + bn(i+1) + ". " + esc(q.q) + '</b><p class="' + cls + '">আপনার উত্তর: ' + mine + "</p>" +
+      (SHOW_ANSWERS ? '<p class="good">সঠিক উত্তর: ' + LETTERS[q.a] + ") " + esc(q.o[q.a]) + "</p>" : "") + "</div>";
+  }).join("");
+  return '<!DOCTYPE html><html lang="bn"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>কুইজ উত্তরপত্র - ' + esc(p.name) +
+    '</title><style>body{font-family:Arial,"Noto Sans Bengali",sans-serif;background:#f4f0fa;color:#24143b;margin:0;padding:18px;line-height:1.6}.sheet{max-width:800px;margin:auto;background:#fff;padding:24px;border-radius:18px}h1{text-align:center;color:#8f1424;font-size:24px}.meta{text-align:center}.score{text-align:center;font-size:28px;font-weight:bold;color:#8f1424}.time{text-align:center;font-weight:bold;color:#087b91;margin:10px}.q{border-bottom:1px solid #ddd;padding:10px 0}.q p{margin:4px 0}.good{color:#08783e}.bad{color:#b3213a}.miss{color:#946500}</style></head><body><main class="sheet"><h1>শ্রী শ্রী জগদ্ধাত্রী পূজা ২০২৬<br>শিমুলপুর অগ্রগামী<br>কুইজ উত্তরপত্র — ' + SETS[r.setKey].label +
+    '</h1><div class="meta"><b>নাম:</b> ' + esc(p.name) + '<br><b>মোবাইল:</b> ' + esc(p.phone) + '</div><div class="score">স্কোর: ' + bn(score) + " / " + bn(total) +
+    '</div><div class="time">মোট সময়: ' + duration(r.endAt - r.startAt) + "</div>" + rows + "</main></body></html>";
+}
+
+$("downloadBtn").addEventListener("click", () => {
+  const p = lastResult.player;
+  const blob = new Blob([reportHtml()], {type:"text/html;charset=utf-8"});
+  const url = URL.createObjectURL(blob), a = document.createElement("a");
+  a.href = url; a.download = "Jagaddhatri_Quiz_" + SETS[lastResult.run.setKey].label.replace(/\s+/g,"_") + "_" + p.name.replace(/[^\p{L}\p{M}\p{N}_-]/gu, "_") + ".html";
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 3000);
+});
+
+$("waBtn").addEventListener("click", () => {
+  const {run:r, player:p} = lastResult;
+  const msg = "জগদ্ধাত্রী পূজা ২০২৬ – শিমুলপুর অগ্রগামী\nকুইজ: " + SETS[r.setKey].label + "\nপ্রতিযোগী: " + p.name + "\nমোবাইল: " + p.phone +
+    "\nস্কোর: " + bn(scoreOf(r)) + " / " + bn(r.qs.length) + "\nমোট সময়: " + duration(r.endAt - r.startAt);
+  window.open("https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(msg), "_blank");
+});
+
+maybeRedrawBg();
+drawLights($("headLights"), 14, true);
+drawAlpana();
+paintSoundBtn();
+boot();
+</script>
+</body>
+</html>
